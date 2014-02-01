@@ -26,7 +26,7 @@ function instag_images_data( $username, $cache_hours, $nr_images ) {
 		$json     	  = wp_remote_get( $user_profile, array( 'sslverify' => false, 'timeout'=> 60 ) );
 		$user_options = compact('username', 'cache_hours', 'nr_images');
 		update_option($opt_name, $user_options);
-		if ( $json['response']['code'] === 200 ) {
+		if ( $json['response']['code'] == 200 ) {
 			
 			$json 	  = $json['body'];
 			$json     = strstr( $json, '{"entry_data"' );

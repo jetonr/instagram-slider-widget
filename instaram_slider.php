@@ -61,10 +61,10 @@ class JR_InstagramSlider extends WP_Widget {
 
 		//Our variables from the widget settings.
 		$title        = apply_filters('widget_title', $instance['title'] );
-		$username     = (isset($instance['username']))      ? $instance['username']     : false;
-		$images_nr    = (isset($instance['images_number'])) ? $instance['images_number'] : 5;
-		$refresh_hour = (isset($instance['refresh_hour']))  ? $instance['refresh_hour'] : 1;
-		$template	  = (isset($instance['template']))      ? $instance['template'] 	: 'slider';
+		$username     = $instance['username'];
+		$images_nr    = $instance['images_number'];
+		$refresh_hour = $instance['refresh_hour'];
+		$template	  = $instance['template'];
 
 		echo $before_widget;
 
@@ -112,21 +112,7 @@ class JR_InstagramSlider extends WP_Widget {
 			<label for="<?php echo $this->get_field_id( 'username' ); ?>"><?php _e('Instagram Username:', 'jrinstaslider'); ?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id( 'username' ); ?>" name="<?php echo $this->get_field_name( 'username' ); ?>" value="<?php echo $instance['username']; ?>" />
 		</p>
-
-		<p>
-			<label  for="<?php echo $this->get_field_id( 'images_number' ); ?>"><?php _e('Number of Images to Show:', 'jrinstaslider'); ?>
-			<input  class="small-text" id="<?php echo $this->get_field_id( 'images_number' ); ?>" name="<?php echo $this->get_field_name( 'images_number' ); ?>" value="<?php echo $instance['images_number']; ?>" />
-			<small><?php _e('( max 20 )', 'jrinstaslider'); ?></small>
-            </label>
-		</p>
-        
-		<p>
-			<label  for="<?php echo $this->get_field_id( 'refresh_hour' ); ?>"><?php _e('Get new images every:', 'jrinstaslider'); ?>
-			<input  class="small-text" id="<?php echo $this->get_field_id( 'refresh_hour' ); ?>" name="<?php echo $this->get_field_name( 'refresh_hour' ); ?>" value="<?php echo $instance['refresh_hour']; ?>" />
-			<small><?php _e('hours', 'jrinstaslider'); ?></small>
-            </label>
-		</p>
-        
+ 
         <p>
           <label for="<?php echo $this->get_field_id( 'template' ); ?>"><?php _e( 'Images Layout', 'jrinstaslider' ); ?>
           <select class="widefat" name="<?php echo $this->get_field_name( 'template' ); ?>">
@@ -135,6 +121,21 @@ class JR_InstagramSlider extends WP_Widget {
           </select>  
           </label>
         </p>
+        
+		<p>
+			<label  for="<?php echo $this->get_field_id( 'images_number' ); ?>"><?php _e('Number of Images to Show:', 'jrinstaslider'); ?>
+			<input  class="small-text" id="<?php echo $this->get_field_id( 'images_number' ); ?>" name="<?php echo $this->get_field_name( 'images_number' ); ?>" value="<?php echo $instance['images_number']; ?>" />
+			<small><?php _e('( max 20 )', 'jrinstaslider'); ?></small>
+            </label>
+		</p>
+               
+		<p>
+			<label  for="<?php echo $this->get_field_id( 'refresh_hour' ); ?>"><?php _e('Check for new images every:', 'jrinstaslider'); ?>
+			<input  class="small-text" id="<?php echo $this->get_field_id( 'refresh_hour' ); ?>" name="<?php echo $this->get_field_name( 'refresh_hour' ); ?>" value="<?php echo $instance['refresh_hour']; ?>" />
+			<small><?php _e('hours', 'jrinstaslider'); ?></small>
+            </label>
+		</p>
+        
 		<?php
 	}
 }
