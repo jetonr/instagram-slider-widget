@@ -40,7 +40,7 @@ function instag_images_data( $username, $cache_hours, $nr_images ) {
 			if ( ( $results ) && is_array( $results ) ) {
 				foreach( $results as $current => $result ) {
 		
-					if( $current >= $nr_images ) break;
+					if( $current <= $nr_images ) break;
 					$caption      = $result['caption'];
 					$image        = $result['images']['standard_resolution'];
 					$id           = $result['id'];
