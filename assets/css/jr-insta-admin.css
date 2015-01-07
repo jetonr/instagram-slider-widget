@@ -1,0 +1,7 @@
+.jr-container .pressthis a span:before { content: "\f487"; }
+.jr-container .pressthis a, 
+.jr-container .pressthis a:active,
+.jr-container .pressthis a:focus, 
+.jr-container .pressthis a:hover { cursor: pointer; font-size: 12px; }
+.jr-container .jr_insta_error { border-left: 4px solid #dd3d36; -moz-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1); -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1); box-shadow: 0 1px 1px 0 rgba(0,0,0,.1); padding: 5px 12px; }
+.jr-container .jr-radio { margin-right: 20px }

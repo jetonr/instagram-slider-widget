@@ -3,7 +3,7 @@ Contributors: jetonr
 Tags: instagram, slider, widget, images
 Donate link: http://goo.gl/RZiu34
 Requires at least: 3.5
-Tested up to: 3.9.1
+Tested up to: 3.9.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -39,6 +39,15 @@ Instagram Slider Widget is a responsive slider widget that shows 20 latest image
 3. Backend Configuration
 
 == Changelog ==
+= 1.1.3 =
+* bug fix not working after wordpresss update
+* Added multisite support
+* Javascript for slider is enqueued at the top of the page
+
+= 1.1.2 =
+* minor bug fix
+* Added Optional Slider Caption Overlay template
+
 = 1.1.1 =
 * The text and control for slider visible on mouse over
 * Reorganised Slider html format
