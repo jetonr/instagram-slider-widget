@@ -3,7 +3,7 @@ Contributors: jetonr
 Tags: instagram, slider, widget, images
 Donate link: http://goo.gl/RZiu34
 Requires at least: 3.5
-Tested up to: 3.9.2
+Tested up to: 4.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,17 +12,17 @@ Instagram Slider Widget is a responsive slider widget that shows 20 latest image
 == Description ==
 * Instagram Slider Widget is a responsive slider widget that shows 20 latest images from a public instagram user. 
 = Features =
-* Images are stored in your wordpress upload folder.
+* Images from instagram are imported as wordpress attachments
 * Display Images in Slider or Thumbnails
 * No Api Key Needed
-* Link images to user profile, image url, locally saved image or custom url
-* Option to Randomise order of instagram images
-* Option to insert images into WordPress Media Library
-* For more info visit http://jrwebstudio.com/
+* Link images to user profile, image url, locally saved image, attachment url, custom url or none
+* Sort images Randomily, Popularity, Date
+* For more info visit http://instagram.jrwebstudio.com
 
 = If you liked this plugin. Please rate it =
 
 == Installation ==
+
 = Installation =
 1. Upload `instagram-slider-widget` to the `/wp-content/plugins/` directory
 2. Activate the plugin through the \'Plugins\' menu in WordPress
@@ -33,12 +33,21 @@ Instagram Slider Widget is a responsive slider widget that shows 20 latest image
 * PHP 5.2.0 or later
 * Wordpress 3.5 or later
 
+== Frequently asked questions ==
+
+= Where can I get support =
+I will try to respond on wordpress.org asap but for faster reposnse use the link bellow
+* http://support.jrwebstudio.com/product/instagram-slider-widget/
+
 == Screenshots ==
 1. Frontend Widget Slider
 2. Frontend Widget Thumbs
 3. Backend Configuration
 
 == Changelog ==
+= 1.2.0 =
+* Full Rewritte of the plugin
+
 = 1.1.3 =
 * bug fix not working after wordpresss update
 * Added multisite support
