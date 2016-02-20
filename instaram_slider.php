@@ -928,9 +928,14 @@ class JR_InstagramSlider extends WP_Widget {
 	 */
 	private function save_wp_attachment( $image_data ) {
 		
-		$image_info = pathinfo( $image_data['url'] );
+		// get path from url
+		$url_path = parse_url($image_data['url'], PHP_URL_PATH);
 		
+		// get file name from path
+		$image_info = pathinfo( $url_path );
+
 		if ( !in_array( $image_info['extension'], array( 'jpg', 'jpe', 'jpeg', 'gif', 'png' ) ) ) {
+			error_log('Unknown extension in url '.$image_data['url']);
 			return false;
 		}
 		
