@@ -3,23 +3,28 @@ Contributors: jetonr
 Tags: instagram, slider, widget, images
 Donate link: http://goo.gl/RZiu34
 Requires at least: 3.5
-Tested up to: 4.1
+Tested up to: 4.7.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Instagram Slider Widget is a responsive slider widget that shows 20 latest images from a public instagram user.
+Instagram Slider Widget is a responsive slider widget that shows 12 latest images from a public instagram user or up to 18 images from a hashtag.
 
 == Description ==
-* Instagram Slider Widget is a responsive slider widget that shows 20 latest images from a public instagram user. 
+= Instagram Slider Widget is a responsive slider widget that shows 12 latest images from a public instagram user or up to 18 images from a hashtag. =
+
+
 = Features =
-* Images from instagram are imported as wordpress attachments
+* Images from Instagram are imported as WordPress attachments
 * Display Images in Slider or Thumbnails
-* No Api Key Needed
-* Link images to user profile, image url, locally saved image, attachment url, custom url or none
-* Sort images Randomily, Popularity, Date
+* No API Key Needed
+* Link images to user profile, image URL, locally saved image, attachment URL, custom URL or none
+* Sort images Randomly, Popularity, Date
 * For more info visit http://instagram.jrwebstudio.com
 
-= If you liked this plugin. Please rate it =
+= Where can I get support =
+I will try to respond to all on plugin support forum but users showing back-link on their website will be more privileged!
+
+= If you like this plugin. Rate it and Donate =
 
 == Installation ==
 
@@ -32,12 +37,7 @@ Instagram Slider Widget is a responsive slider widget that shows 20 latest image
 = Requirements =
 * PHP 5.2.0 or later
 * Wordpress 3.5 or later
-
-== Frequently asked questions ==
-
-= Where can I get support =
-I will try to respond on wordpress.org asap but for faster reposnse use the link bellow
-* http://support.jrwebstudio.com/product/instagram-slider-widget/
+* WordPress Cron must be enabled
 
 == Screenshots ==
 1. Frontend Widget Slider
@@ -45,6 +45,58 @@ I will try to respond on wordpress.org asap but for faster reposnse use the link
 3. Backend Configuration
 
 == Changelog ==
+= 1.4.1 =
+* Quick fix for new instagram update that stoped tags from working
+* Fixed hellip that showed when using wp trim words
+
+= 1.4.0 =
+* Fixed the issue where duplicate images were being inserted into Media Library
+* Added a button in widget to remove previously created duplicate images
+* Simplified the options to save images into media library
+* Added an option to show backlink to help plugin development
+
+= 1.3.3 =
+* Fixed notification error message.
+
+= 1.3.2 =
+* Fixed deeplink issue with smartphones. Contributors via wordpress forum @ricksportel
+* Added option to block users when searching for hashtag. Sponsored by VirtualStrides.com
+* Modified sizes to show square croped and original sizes
+* Added new wordpress size only for instagram plugin - regenerating thumbnails might be required.
+* Added option to stop Pinterest pinning on images
+
+= 1.3.1 =
+* Fixed issue when no images were shown due to instagram recent changes.
+* Caption fix when no caption in image
+* set wait time to 3 min for php because of larger images
+* updated flexislider to latest version
+
+= 1.3.0 =
+* Added Option to search for hashtags
+* Added Limit for number of words to appear in caption
+* Fixed 500 server error that accured when loading 15+ images
+* Fixed css for some themes
+ 
+= 1.2.3 =
+* Added Links for Instagram Hashtags
+* Updtated flexislider to 2.5.0
+* Added Slide Speed in miliseconds
+* Brought back Image Size for images loaded directly from Instagram
+* Changed CSS for thumbnails Template
+* Added Thumbnails Without borders template
+
+= 1.2.2 =
+* Modified the code to work with new Instagram Page
+* Removed Image Size option when loading images directly from Instagram
+* 24 Images can now be displayed
+* Fixed multiple widget bug using widget ids in class names
+* Added better explanation for sources
+
+= 1.2.1 =
+* Bug fixes
+* Shortcode for widgets
+* Option not to insert images into media library
+
 = 1.2.0 =
 * Full Rewritte of the plugin
 
