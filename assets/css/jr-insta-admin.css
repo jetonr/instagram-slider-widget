@@ -1,6 +1,6 @@
 .jr-container .donate { padding: 5px 15px 10px; display: inline-block; position: relative; color: #000; background: #ffd751; -webkit-border-radius: 5px; border-radius: 5px; border: 1px solid #b4b4b4; font-weight: bold; font-size: 14px; text-decoration: none; }
 .jr-container .donate a { outline: 0; cursor: pointer }
-.jr-container .donate span:before { color: #ce1f00; font: 400 20px/1 dashicons; font-family: dashicons; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; line-height: 1; content: '\f524'; position: relative; display: inline-block; top: 4px; margin-right: 4px; }
+.jr-container .donate span:before { color: #ce1f00; font: 400 20px/1 dashicons; font-family: dashicons; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; line-height: 1; content: '\f487'; position: relative; display: inline-block; top: 4px; margin-right: 4px; }
 .jr-container .pressthis a, .jr-container .pressthis-bookmarklet a, 
 .jr-container .pressthis a:active, .jr-container .pressthis-bookmarklet a:active,
 .jr-container .pressthis a:focus, .jr-container .pressthis-bookmarklet a:focus,
@@ -27,3 +27,5 @@
 .jr-container input:checked + .slider:before { -webkit-transform: translateX(22px); -ms-transform: translateX(22px); transform: translateX(22px); }
 .jr-container .slider.round { border-radius: 34px; }
 .jr-container .slider.round:before { border-radius: 50%; }
+.jr-container .donate-buttons { text-align: center }
+.jr-container .donate-button-link { cursor: pointer }

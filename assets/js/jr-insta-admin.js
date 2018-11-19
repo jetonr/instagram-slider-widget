@@ -1,6 +1,12 @@
 (function($) {
 	
 	$(document).ready(function($){
+		$('.donate-bitcoin-qr-address').hide();
+	    $('.donate-button-link').on('click', function (e) {
+	        e.preventDefault();
+	        //$(this).slideUp(100);
+	        $('.donate-bitcoin-qr-address').slideToggle();
+	    });
 		
 		// Hide Custom Url if image link is not set to custom url
 		$('body').on('change', '.jr-container select[id$="images_link"]', function(e){
@@ -29,19 +35,17 @@
 			var search_for = $(this);
 			if ( search_for.val() != 'username' ) {
 				search_for.closest('.jr-container').find('[id$="attachment"]:checkbox').closest('p').animate({opacity: 'hide' , height: 'hide'}, 200);
-				search_for.closest('.jr-container').find('select[id$="images_link"] option[value="local_image_url"]').animate({opacity: 'hide' , height: 'hide'}, 200);
 				search_for.closest('.jr-container').find('select[id$="images_link"] option[value="user_url"]').animate({opacity: 'hide' , height: 'hide'}, 200);			
 				search_for.closest('.jr-container').find('select[id$="images_link"] option[value="attachment"]').animate({opacity: 'hide' , height: 'hide'}, 200);
-				search_for.closest('.jr-container').find('select[id$="images_link"]').val('image_url');				
+				search_for.closest('.jr-container').find('select[id$="images_link"]').val('image_link');				
 				search_for.closest('.jr-container').find('select[id$="description"] option[value="username"]').animate({opacity: 'hide' , height: 'hide'}, 200);
 				search_for.closest('.jr-container').find('input[id$="blocked_users"]').closest('p').animate({opacity: 'show' , height: 'show'}, 200);
 
 			} else {
 				search_for.closest('.jr-container').find('[id$="attachment"]:checkbox').closest('p').animate({opacity: 'show' , height: 'show'}, 200);				
-				search_for.closest('.jr-container').find('select[id$="images_link"] option[value="local_image_url"]').animate({opacity: 'show' , height: 'show'}, 200);
 				search_for.closest('.jr-container').find('select[id$="images_link"] option[value="user_url"]').animate({opacity: 'show' , height: 'show'}, 200);			
 				search_for.closest('.jr-container').find('select[id$="images_link"] option[value="attachment"]').animate({opacity: 'show' , height: 'show'}, 200);		
-				search_for.closest('.jr-container').find('select[id$="images_link"]').val('image_url');
+				search_for.closest('.jr-container').find('select[id$="images_link"]').val('image_link');
 				search_for.closest('.jr-container').find('select[id$="description"] option[value="username"]').animate({opacity: 'show' , height: 'show'}, 200);
 				search_for.closest('.jr-container').find('input[id$="blocked_users"]').closest('p').animate({opacity: 'hide' , height: 'hide'}, 200);
 
@@ -52,15 +56,11 @@
 		$('body').on('change', '.jr-container [id$="attachment"]:checkbox', function(e){
 			var attachment = $(this);
 			if ( this.checked ) {
-				attachment.closest('.jr-container').find('.blocked-wrap').animate({opacity: 'show' , height: 'show'}, 200);
-				attachment.closest('.jr-container').find('select[id$="images_link"] option[value="local_image_url"]').animate({opacity: 'show' , height: 'show'}, 200);
 				attachment.closest('.jr-container').find('select[id$="images_link"] option[value="attachment"]').animate({opacity: 'show' , height: 'show'}, 200);
-				attachment.closest('.jr-container').find('select[id$="images_link"]').val('image_url');
+				attachment.closest('.jr-container').find('select[id$="images_link"]').val('image_link');
 			} else {
-				attachment.closest('.jr-container').find('.blocked-wrap').animate({opacity: 'hide' , height: 'hide'}, 200);
-				attachment.closest('.jr-container').find('select[id$="images_link"] option[value="local_image_url"]').animate({opacity: 'hide' , height: 'hide'}, 200);
 				attachment.closest('.jr-container').find('select[id$="images_link"] option[value="attachment"]').animate({opacity: 'hide' , height: 'hide'}, 200);				
-				attachment.closest('.jr-container').find('select[id$="images_link"]').val('image_url');
+				attachment.closest('.jr-container').find('select[id$="images_link"]').val('image_link');
 			}
 		});
 
@@ -75,7 +75,7 @@
 				$(this).html('[ + Open ]');
 			}
 			advanced_container.toggle();
-		});
+		});	
 		
 		// Remove blocked images with ajax
 		$('body').on('click', '.jr-container .jr-delete-instagram-dupes', function(e){

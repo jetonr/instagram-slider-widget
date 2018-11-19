@@ -1,28 +1,29 @@
 === Instagram Slider Widget ===
 Contributors: jetonr
 Tags: instagram, slider, widget, images
-Donate link: http://goo.gl/RZiu34
+Donate link: http://bit.ly/2EseW2p
 Requires at least: 3.5
-Tested up to: 4.7.2
+Tested up to: 4.9.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Instagram Slider Widget is a responsive slider widget that shows 12 latest images from a public instagram user or up to 18 images from a hashtag.
+Instagram Slider Widget is a responsive slider widget that shows 12 latest images from a public instagram user or a hashtag.
 
 == Description ==
-= Instagram Slider Widget is a responsive slider widget that shows 12 latest images from a public instagram user or up to 18 images from a hashtag. =
+= Instagram Slider Widget is a responsive slider widget that shows 12 latest images from a public instagram user or a hashtag. =
 
 
 = Features =
 * Images from Instagram are imported as WordPress attachments
 * Display Images in Slider or Thumbnails
 * No API Key Needed
-* Link images to user profile, image URL, locally saved image, attachment URL, custom URL or none
+* Link images to user profile, image URL, attachment URL, custom URL or none
 * Sort images Randomly, Popularity, Date
 * For more info visit http://instagram.jrwebstudio.com
 
 = Where can I get support =
 I will try to respond to all on plugin support forum but users showing back-link on their website will be more privileged!
+
 
 = If you like this plugin. Rate it and Donate =
 
@@ -45,9 +46,16 @@ I will try to respond to all on plugin support forum but users showing back-link
 3. Backend Configuration
 
 == Changelog ==
+= 1.4.3 =
+* Fix for instagram api change
+
+= 1.4.2 =
+* Minor fix for instagram json change
+
 = 1.4.1 =
-* Quick fix for new instagram update that stoped tags from working
+* Fixed Instagram update that stoped hashtags from working
 * Fixed hellip that showed when using wp trim words
+* Modified the function that saved images localy to only save as attachments
 
 = 1.4.0 =
 * Fixed the issue where duplicate images were being inserted into Media Library
